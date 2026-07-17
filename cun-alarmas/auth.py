@@ -134,4 +134,4 @@ def do_login_flow():
 def logout():
     for key in ("credentials", "user_email", "oauth_state"):
         st.session_state.pop(key, None)
-    st.rerun()
+    st.rerun() 
