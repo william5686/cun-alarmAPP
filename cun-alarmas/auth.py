@@ -145,9 +145,25 @@ def do_login_flow():
         return True
 
     query_params = st.query_params
-    if "code" in query_params and "state" in query_params:
-        code = query_params["code"]
-        code_verifier = query_params["state"]
+    if "code" in query_params:
+        code = query_params.get("code", "")
+        code_verifier = query_params.get("state", "")
+
+        # --- DIAGNÓSTICO TEMPORAL: quitar una vez funcione el login ---
+        with st.expander("🔧 Diagnóstico (temporal)", expanded=True):
+            st.write("Parámetros recibidos de Google:")
+            st.write({k: query_params.get(k) for k in query_params.keys()})
+            st.write(f"code presente: {bool(code)} (largo: {len(code)})")
+            st.write(f"state/code_verifier presente: {bool(code_verifier)} (largo: {len(code_verifier)})")
+        # ---------------------------------------------------------------
+
+        if not code_verifier:
+            st.error(
+                "No llegó el parámetro 'state' (code_verifier) en la redirección de Google. "
+                "Revisa el diagnóstico de arriba."
+            )
+            return False
+
         try:
             credentials = exchange_code_for_credentials(code, code_verifier)
             email = get_user_email(credentials)
