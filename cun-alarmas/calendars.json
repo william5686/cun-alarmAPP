@@ -1,0 +1,90 @@
+{
+  "presencial": {
+    "2026A": {
+      "unidades": {
+        "Primer Corte": "2026-03-22",
+        "Segundo Corte": "2026-04-26",
+        "Tercer Corte": "2026-05-27"
+      },
+      "cierre_periodo_inicio": "2026-05-25",
+      "cierre_periodo_fin": "2026-06-03"
+    },
+    "2026B": {
+      "unidades": {
+        "Primer Corte": "2026-05-17",
+        "Segundo Corte": "2026-06-21",
+        "Tercer Corte": "2026-07-22"
+      },
+      "cierre_periodo_inicio": "2026-07-20",
+      "cierre_periodo_fin": "2026-07-29"
+    },
+    "2026C": {
+      "unidades": {
+        "Primer Corte": "2026-09-20",
+        "Segundo Corte": "2026-10-25",
+        "Tercer Corte": "2026-11-25"
+      },
+      "cierre_periodo_inicio": "2026-11-23",
+      "cierre_periodo_fin": "2026-12-02"
+    },
+    "2026D": {
+      "unidades": {
+        "Primer Corte": "2026-11-15",
+        "Segundo Corte": "2026-12-20",
+        "Tercer Corte": "2027-01-20"
+      },
+      "cierre_periodo_inicio": "2027-01-18",
+      "cierre_periodo_fin": "2027-01-27"
+    }
+  },
+  "virtual": {
+    "26P01": {
+      "unidades": {
+        "Primer Bloque": "2026-03-30",
+        "Segundo Bloque": "2026-05-18"
+      },
+      "cierre_periodo_inicio": "2026-05-19",
+      "cierre_periodo_fin": "2026-05-20"
+    },
+    "26P02": {
+      "unidades": {
+        "Primer Bloque": "2026-05-25",
+        "Segundo Bloque": "2026-07-13"
+      },
+      "cierre_periodo_inicio": "2026-07-14",
+      "cierre_periodo_fin": "2026-07-16"
+    },
+    "26P03": {
+      "unidades": {
+        "Primer Bloque": "2026-07-20",
+        "Segundo Bloque": "2026-09-21"
+      },
+      "cierre_periodo_inicio": "2026-09-22",
+      "cierre_periodo_fin": "2026-09-23"
+    },
+    "26P04": {
+      "unidades": {
+        "Primer Bloque": "2026-09-28",
+        "Segundo Bloque": "2026-11-16"
+      },
+      "cierre_periodo_inicio": "2026-11-17",
+      "cierre_periodo_fin": "2026-11-18"
+    },
+    "26P05": {
+      "unidades": {
+        "Primer Bloque": "2026-11-23",
+        "Segundo Bloque": "2027-01-11"
+      },
+      "cierre_periodo_inicio": "2027-01-12",
+      "cierre_periodo_fin": "2027-01-16"
+    },
+    "26P06": {
+      "unidades": {
+        "Primer Bloque": "2027-01-18",
+        "Segundo Bloque": "2027-03-22"
+      },
+      "cierre_periodo_inicio": "2027-03-23",
+      "cierre_periodo_fin": "2027-03-27"
+    }
+  }
+}
