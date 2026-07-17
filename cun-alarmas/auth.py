@@ -57,12 +57,18 @@ def get_login_url() -> str:
         prompt="select_account",
     )
     st.session_state["oauth_state"] = state
+    # Google exige PKCE: el mismo code_verifier que se usó para armar la URL
+    # de login se debe reutilizar al intercambiar el "code" por el token.
+    # Como cada rerun de Streamlit crea un objeto Flow nuevo, hay que
+    # guardarlo en session_state para no perderlo.
+    st.session_state["code_verifier"] = flow.code_verifier
     return auth_url
 
 
 def exchange_code_for_credentials(code: str) -> Credentials:
     """Cambia el 'code' que Google devuelve por un token utilizable."""
     flow = _build_flow()
+    flow.code_verifier = st.session_state.get("code_verifier")
     flow.fetch_token(code=code)
     return flow.credentials
 
